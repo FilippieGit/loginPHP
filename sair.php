@@ -8,7 +8,7 @@
 
 	<?php 
 
-		session_start();
+	session_start();
 
 		$_SESSION['login'];
 		$_SESSION['senha'];
@@ -21,7 +21,7 @@
 	<h2>Você tem certeza que quer sair?</h2>
 	<p>
 	<a href="validar.php">Não</a>
-	<input type="submit" name="sair" value="sair">
+	<a href="index.php">Sim <?php session_destroy(); ?></a>
 
 </body>
 </html>

@@ -16,6 +16,11 @@
 </head>
 <body style="margin: 37px;">
 
+	<?php if (empty($_SESSION['login'])) {
+	}else{ 
+		echo "Você já está logado";
+	}?>
+
 	<form name="logar" method="post" action="validar.php">
 		<label for="login">Login:</label>
 		<input type="text" class="" name="login" id="login" autofocus autocomplete="off">

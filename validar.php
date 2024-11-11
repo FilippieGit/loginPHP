@@ -17,6 +17,7 @@
 </head>
 <body>
 
+
 	<?php
 
 		$con = 0;
@@ -31,7 +32,7 @@
 			$con++;
 			$_SESSION['usuario'] = "Colaborador";
 		}else{
-			echo "Houve um erro ao validar seus dados.<br><a href='index.php'>Tentar novamente</a>";
+			echo "Houve um erro ao validar seus dados.<br><a href='index.php'>Tentar novamente<?php session_destroy(); ?> </a>";
 		}
 
 		if ($con == 1) {
