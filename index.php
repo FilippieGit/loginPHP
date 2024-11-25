@@ -9,17 +9,22 @@
 
 		session_start();
 
-		if(isset($_GET["sim"])){
-		     echo "GENTE NAO SEI";
+		if ($_SESSION['con'] = 1) {
+			echo "Você está logado.";
 		}
+
 	 ?>
 </head>
 <body style="margin: 37px;">
 
-	<?php if (empty($_SESSION['login'])) {
+	<?php /* if (empty($_SESSION['login'])) {
 	}else{ 
 		echo "Você já está logado";
-	}?>
+	}*/ ?>
+
+	<?php if ($_SESSION['con'] = 0) {
+		
+	?>
 
 	<form name="logar" method="post" action="validar.php">
 		<label for="login">Login:</label>
@@ -30,6 +35,8 @@
 		<br><br>
 		<input class="btn btn-dark" type="submit" name="enviar" value="Enviar">
 	</form>
+
+	<?php } ?>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

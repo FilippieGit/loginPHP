@@ -8,19 +8,17 @@
 
 	<?php 
 
-	session_start();
-
-		$_SESSION['login'];
-		$_SESSION['senha'];
+		$_SESSION['con'] = 0;
 
 	 ?>
+
 
 </head>
 <body>
 
 	<h2>Você tem certeza que quer sair?</h2>
 	<p>
-	<a href="validar.php">Não</a>
+	<a href="index.php">Não <?php $_SESSION['con']++; ?></a>
 	<a href="index.php">Sim <?php session_destroy(); ?></a>
 
 </body>
